@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/color_row_fiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/separator"
+        android:layout_alignTop="@+id/audio_title"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/song_progress_view"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="0"
+            android:background="@drawable/seekfyz"
+            android:radius="10dp" />
+
+        <View
+            android:id="@+id/song_anti_progress_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/audio_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="start"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp"
+        android:text="عنوان المقطع"
+        android:textAlignment="textStart"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/audio_title"
+        android:layout_gravity="end"
+        android:text="Delete" />
+
+    <ImageView
+        android:id="@+id/iv_play_active"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        app:srcCompat="@drawable/volume_fyiz" />
+
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/btn_delete"
+        android:background="@color/colorPrimaryDark"
+        android:paddingEnd="3dp"
+        android:paddingStart="3dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/backfayz"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDarksa"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/titlelist"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            tools:text="القائمة" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:id="@+id/txtlding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBarpage"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="فضلاً انتظر...جاري تحميل البيانات" />
+
+            <ProgressBar
+                android:id="@+id/progressBarpage"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:indeterminateTint="@android:color/holo_blue_dark" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.example.jean.jcplayer.view.JcPlayerView
+            android:id="@+id/jcplayer"
+            android:layoutDirection="ltr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/hide"
+            android:gravity="bottom"
+            app:next_icon_color="@android:color/white"
+            app:next_icon="@drawable/fiz_next_ri"
+            app:pause_icon="@drawable/ic_pause_sound"
+            app:pause_icon_color="@color/cardview_light_background"
+            app:play_icon="@drawable/ic_play_sound"
+            app:play_icon_color="@color/cardview_light_background"
+            app:previous_icon_color="@android:color/white"
+            app:previous_icon="@drawable/fiz_next_lif"
+            app:progress_color="@android:color/white"
+            app:random_icon_color="@android:color/white"
+            app:repeat_icon_color="@android:color/white"
+            app:seek_bar_color="@android:color/white"
+            app:text_audio_current_duration_color="@android:color/background_dark"
+            app:text_audio_duration_color="@android:color/background_dark"
+            app:text_audio_title_color="@android:color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryDark">
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/ic_infoicon" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp"
+                android:background="@drawable/ic_news" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_homeicon" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
